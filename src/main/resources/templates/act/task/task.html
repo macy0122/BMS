@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh_CN" xmlns:shiro="http://www.pollix.at/thymeleaf/shiro"
+      xmlns:th="http://www.thymeleaf.org">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="row">
+        <div class="col-sm-11">
+            <div class="ibox">
+                <div class="ibox-body">
+                    <div class="fixed-table-toolbar">
+                        <div class="columns pull-left">
+                            <button class="btn  btn-primary" onclick="add()"
+                                    shiro:hasPermission="sys:user:add" type="button">
+                                <i aria-hidden="true" class="fa fa-plus "></i>添加
+                            </button>
+                            <button class="btn  btn-danger" onclick="batchRemove()"
+                                    shiro:hasPermission="sys:user:batchRemove" type="button">
+                                <i aria-hidden="true" class="fa fa-trash "></i>删除
+                            </button>
+                        </div>
+                        <div class="columns pull-right">
+                            <button class="btn btn-success" onclick="reLoad()">查询</button>
+                        </div>
+
+                        <div class="columns pull-right col-md-2 nopadding">
+                            <input class="form-control" id="searchName" placeholder="姓名"
+                                   type="text">
+                        </div>
+                    </div>
+                    <table data-mobile-responsive="true" id="exampleTable">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
+    <div>
+        <script type="text/javascript">
+            var s_edit_h = 'hidden';
+            var s_remove_h = 'hidden';
+            var s_resetPwd_h = 'hidden';
+        </script>
+    </div>
+    <div shiro:hasPermission="act:model:edit">
+        <script type="text/javascript">
+            var s_edit_h = '';
+        </script>
+    </div>
+    <div shiro:hasPermission="act:model:remove">
+        <script type="text/javascript">
+            var s_remove_h = '';
+        </script>
+    </div>
+    <div shiro:hasPermission="act:model:resetPwd">
+        <script type="text/javascript">
+            var s_resetPwd_h = '';
+        </script>
+    </div>
+</div>
+<div th:include="include :: footer"></div>
+<script src="/js/appjs/act/model/model.js" type="text/javascript"></script>
+</body>
+</html>

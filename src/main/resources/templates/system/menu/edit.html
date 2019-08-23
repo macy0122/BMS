@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+
+        <title></title>
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <link href="favicon.ico" rel="shortcut icon">
+        <link href="/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+        <link href="/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+        <link href="/css/animate.css" rel="stylesheet">
+        <link href="/css/style.css?v=4.1.0" rel="stylesheet">
+    </head>
+    <body class="gray-bg">
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                            <form class="form-horizontal m-t" id="signupForm">
+                                <input id="parentId" name="parentId" th:value="${pId}"
+                                       type="hidden"/>
+                                <input id="menuId" name="menuId"
+                                       th:value="${menu.menuId}" type="hidden"/>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">上级菜单：</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="" name="" readonly
+                                               th:value="${pName}" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">菜单类型：</label>
+                                    <div class="col-sm-8">
+                                        <label class="radio-inline">
+                                            <input name="type"
+                                                   th:field="*{menu.type}" type="radio" value="0"/>
+                                            目录
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input name="type"
+                                                   th:field="*{menu.type}" type="radio"
+                                                   value="1"/>
+                                            菜单
+                                        </label>
+                                        <label class="radio-inline">
+                                            <input name="type"
+                                                   th:field="*{menu.type}" type="radio" value="2"/>
+                                            按钮
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">菜单名称：</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="name" name="name" required
+                                               th:value="${menu.name}" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">链接地址：</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="url" name="url" th:value="${menu.url}"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">权限标识：</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="perms" name="perms" th:value="${menu.perms}"
+                                               type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">排序号：</label>
+                                    <div class="col-sm-8">
+                                        <input class="form-control" id="orderNum" name="orderNum"
+                                               th:value="${menu.orderNum}" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">图标：</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" id="icon" name="icon"
+                                               placeholder="例如：fa fa-circle-o"
+                                               th:value="${menu.icon}" type="text">
+                                    </div>
+                                    <input class="btn btn-warning" id="ico-btn" type="button" value="选择图标">
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-8 col-sm-offset-3">
+                                        <button class="btn btn-info" type="submit">提交</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:include="include::footer"></div>
+        <script src="/js/appjs/sys/menu/edit.js"></script>
+    </body>
+
+</html>

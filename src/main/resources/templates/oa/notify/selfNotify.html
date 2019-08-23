@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="col-sm-12">
+        <div class="ibox">
+            <div class="ibox-body">
+                <div class="fixed-table-toolbar">
+                    <div class="columns pull-left">
+                        <button class="btn  btn-primary hidden" onclick="read()" type="button">
+                            <i aria-hidden="true" class="fa fa-plus"></i>设为已读
+                        </button>
+                        <button class="btn  btn-danger hidden" onclick="batchRemove()"
+                                shiro:hasPermission="oa:notify:batchRemove" type="button">
+                            <i aria-hidden="true" class="fa fa-trash"></i>删除
+                        </button>
+                    </div>
+                    <div class="columns pull-right">
+                        <button class="btn btn-success" onclick="reLoad()">查询</button>
+                    </div>
+                    <div class="columns pull-right col-md-2 nopadding">
+                        <input class="form-control" id="searchName" placeholder=""
+                               type="text">
+                    </div>
+                </div>
+                <table data-mobile-responsive="true" id="exampleTable">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--shiro控制bootstraptable行内按钮看见性 来自bootdo的创新方案 -->
+<div>
+    <script type="text/javascript">
+        var s_edit_h = 'hidden';
+        var s_remove_h = 'hidden';
+        var s_resetPwd_h = 'hidden';
+    </script>
+</div>
+<div shiro:hasPermission="oa:notify:edit">
+    <script type="text/javascript">
+        s_edit_h = '';
+    </script>
+</div>
+<div shiro:hasPermission="oa:notify:remove">
+    <script type="text/javascript">
+        var s_remove_h = '';
+    </script>
+</div>
+<div shiro:hasPermission="oa:notify:resetPwd">
+    <script type="text/javascript">
+        var s_resetPwd_h = '';
+    </script>
+</div>
+<div th:include="include :: footer"></div>
+<script src="/js/appjs/oa/notify/selfNotify.js" type="text/javascript"></script>
+</body>
+</html>

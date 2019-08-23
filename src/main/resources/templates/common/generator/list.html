@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="col-sm-12">
+        <div class="ibox">
+            <div class="ibox-body">
+                <div id="exampleToolbar" role="group">
+                    <button class="btn  btn-primary" onclick="batchCode()"
+                            type="button">
+                        <i aria-hidden="true" class=""></i>批量生成
+                    </button>
+                    <button class="btn  btn-success" onclick="edit()"
+                            type="button">
+                        <i aria-hidden="true" class=""></i>生成策略
+                    </button>
+                </div>
+                <table data-mobile-responsive="true" id="exampleTable">
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include :: footer"></div>
+<script src="/js/appjs/common/generator/list.js" type="text/javascript"></script>
+</body>
+</html>

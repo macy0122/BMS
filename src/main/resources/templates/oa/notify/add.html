@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+<div class="wrapper wrapper-content ">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <form class="form-horizontal m-t" id="signupForm">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">类型：</label>
+                            <div class="col-sm-8">
+                                <select class="form-control chosen-select" data-placeholder="--选择类别--" id="type"
+                                        name="type" required tabindex="2">
+                                    <option value="">--选择类别--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">标题：</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="title" name="title" required type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">内容：</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="content" name="content" required></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">附件：</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" id="files" name="files" type="file">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">接收人：</label>
+                            <div class="col-sm-8">
+                                <input class="hidden" id="userIds" name="userIds">
+                                <input class="form-control" id="userNames" name="userNames"
+                                       onclick="openUser()" placeholder="接收人"
+                                       readonly="readonly" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">立即发布：</label>
+                            <div class="switch  col-sm-1">
+                                <div class="onoffswitch">
+                                    <input checked="" class="onoffswitch-checkbox" id="status" name="status"
+                                           type="checkbox" value="1"> <label
+                                        class="onoffswitch-label" for="status"> <span
+                                        class="onoffswitch-inner"></span> <span
+                                        class="onoffswitch-switch"></span>
+                                </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">备注信息：</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="remarks" name="remarks"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-3">
+                                <button class="btn btn-primary" type="submit">提交</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:include="include::footer"></div>
+<script src="/js/appjs/oa/notify/add.js" type="text/javascript">
+
+</script>
+</body>
+</html>

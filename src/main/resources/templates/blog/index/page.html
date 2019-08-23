@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<body>
+
+<div class="summernote" id="content"></div>
+
+<script th:inline="javascript" type="text/javascript">
+    $().ready(function () {
+        $('.summernote').summernote({
+            lang: 'zh-CN'
+        });
+        var content = /*[[${bContent.content}]]*/
+            $('#content').code(content);
+        $('.summernote').destroy();
+    });
+</script>
+</body>
+</html>
