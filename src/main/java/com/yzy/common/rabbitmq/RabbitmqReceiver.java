@@ -27,7 +27,8 @@ public class RabbitmqReceiver {
     public void process(String msg) {
         try {
             String[] args = msg.split(",");
-            smsSender.sendSMS(args[0], "验证码：" + args[1]);
+            System.out.println("验证码：" + args[1]);
+//            smsSender.sendSMS(args[0], "验证码：" + args[1]);
         } catch (Exception e) {
             LOGGER.error(e.getMessage());
         }
