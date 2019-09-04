@@ -4,7 +4,7 @@ import com.yzy.common.config.Constant;
 import com.yzy.common.dao.TaskDao;
 import com.yzy.common.domain.ScheduleJob;
 import com.yzy.common.domain.TaskDO;
-import com.yzy.common.quartz.utils.QuartzManager;
+import com.yzy.common.quartz.QuartzManager;
 import com.yzy.common.service.JobService;
 import com.yzy.common.utils.ScheduleJobUtils;
 import org.quartz.SchedulerException;
