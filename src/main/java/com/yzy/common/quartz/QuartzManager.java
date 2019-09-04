@@ -1,4 +1,4 @@
-package com.yzy.common.quartz.utils;
+package com.yzy.common.quartz;
 
 import cn.hutool.core.util.ClassUtil;
 import com.yzy.common.domain.ScheduleJob;
