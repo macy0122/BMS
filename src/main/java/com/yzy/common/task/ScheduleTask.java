@@ -12,9 +12,9 @@ import java.util.Calendar;
 public class ScheduleTask {
 
 	/**
-	 * 定时任务1min执行一次
+	 * 定时任务2min执行一次
 	 */
-	@Scheduled(fixedRate = 60000)
+	@Scheduled(fixedRate = 120000)
 	public void scheduleTask(){
 		System.out.println("这是一个定时任务!"+ Calendar.getInstance().getTime().toString());
 	}
