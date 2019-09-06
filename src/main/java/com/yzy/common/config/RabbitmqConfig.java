@@ -1,9 +1,6 @@
 package com.yzy.common.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -37,7 +34,7 @@ public class RabbitmqConfig {
     }
 
     /**
-     * 创建交换器
+     * 创建直连交换器
      *
      * @return DirectExchange
      */
@@ -46,4 +43,23 @@ public class RabbitmqConfig {
         return new DirectExchange("login_exchange", true, false);
     }
 
+	/**
+	 * 创建topic交换器
+	 *
+	 * @return TopicExchange
+	 */
+    @Bean
+	public TopicExchange loginTopicExchange(){
+    	return new TopicExchange("login_topic_exchange", true, false);
+    }
+
+	/**
+	 * 创建fanout交换器
+	 *
+	 * @return FanoutExchange
+	 */
+	@Bean
+	public FanoutExchange loginFanoutExchange(){
+		return new FanoutExchange("login_fanout_exchange", true, false);
+	}
 }
