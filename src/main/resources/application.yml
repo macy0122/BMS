@@ -1,13 +1,7 @@
 server:
-  session-timeout: 3600
-  #    tomcat:
-  #        max-threads: 1000
-  #        min-spare-threads: 30
   port: 80
-#    uri-encoding: utf-8
-#security:
-#  basic:
-#    enabled: false
+  session-timeout: 3600
+
 spring:
   thymeleaf:
     mode: HTML5
@@ -18,32 +12,87 @@ spring:
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
-  profiles:
-    active: dev
   servlet:
     multipart:
       max-file-size: 30MB
       max-request-size: 30MB
-  devtools:
-    restart:
-      enabled: true
   cache:
     type: redis
     redis:
       key-prefix: redis_cache
       use-key-prefix: true
     cache-names: redis_cache
-
-#  cache:
 #    type: ehcache
 #    ehcache:
 #      config: classpath:config/ehcache.xml
 
+# redis配置
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password:
+    # 连接超时时间（毫秒）
+    timeout: 10000
+    jedis:
+      pool:
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池中的最小空闲连接
+        min-idle: 10
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 100
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+#  rabbitmq config
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: 123456
+    listener:
+      simple:
+        concurrency: 10
+        prefetch: 5
+        max-concurrency: 20
+
+# quartz配置
+  quartz:
+    #相关属性配置
+    properties:
+      org:
+        quartz:
+          scheduler:
+            #scheduler实例名称与id分配
+            instanceName: clusteredScheduler
+            instanceId: AUTO
+            #job的保存设置
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            isClustered: true
+            clusterCheckinInterval: 10000
+            useProperties: false
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 10
+            threadPriority: 5
+            threadsInheritContextClassLoaderOfInitializingThread: true
+  devtools:
+    restart:
+      enabled: true
+# profiles
+  profiles:
+    active: dev
+
+# mybatis
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
   mapper-locations: mybatis/**/*Mapper.xml
   typeAliasesPackage: com.yzy.**.domain
 
+# logging
 logging:
   config: classpath:logback-spring.xml

@@ -200,7 +200,11 @@
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.google.collections</groupId>
+            <artifactId>google-collections</artifactId>
+            <version>1.0</version>
+        </dependency>
 
         <!-- xss过滤组件 -->
         <dependency>
