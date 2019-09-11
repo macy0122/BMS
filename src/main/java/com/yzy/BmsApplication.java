@@ -9,10 +9,18 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-
 /**
- * @author yzy
+ * @title:
+ * @description:  springboot 启动类
+ *
+ * @package: ${PACKAGE_NAME}.BmsApplication.java
+ * @param:
+ * @return:
+ * @author: yzy
+ * @date: ${DATE} ${TIME}
+ * @version: v1.0
  */
+
 
 @EnableCaching
 @EnableScheduling
