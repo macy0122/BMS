@@ -9,7 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @title:
  * @description:
  * @package: com.yzy.test
- * @ClassName: com.yzy.test..java
+ * @ClassName: com.yzy.test.TestIp2Region.java
  * @author: yzy
  * @date: 2019/9/10 14:37
  * @param:

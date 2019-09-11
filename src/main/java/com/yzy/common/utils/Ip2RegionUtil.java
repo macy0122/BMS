@@ -9,10 +9,10 @@ import java.io.File;
 import java.lang.reflect.Method;
 
 /**
- * @title:
- * @description:
+ * @title: Ip2RegionUtil
+ * @description:  ip2region:可以根据他获取一个具体ip的信息，国家、具体地址、网络服务商
  * @package: com.yzy.common.utils
- * @ClassName: com.yzy.common.utils..java
+ * @ClassName: com.yzy.common.utils.Ip2RegionUtil.java
  * @author: yzy
  * @date: 2019/9/10 14:22
  * @param:
