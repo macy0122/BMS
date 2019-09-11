@@ -13,14 +13,13 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @title:
  * @description:  springboot 启动类
  *
- * @package: ${PACKAGE_NAME}.BmsApplication.java
+ * @package: com.yzy.BmsApplication.java
  * @param:
  * @return:
  * @author: yzy
- * @date: ${DATE} ${TIME}
+ * @date: 2019-09-11 17:42:12
  * @version: v1.0
  */
-
 
 @EnableCaching
 @EnableScheduling
@@ -30,6 +29,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @MapperScan("com.yzy.*.dao")
 @SpringBootApplication(exclude = {org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class})
 public class BmsApplication {
+
 	public static void main(String[] args) {
 		SpringApplication.run(BmsApplication.class, args);
 		System.out.println("启动成功");
