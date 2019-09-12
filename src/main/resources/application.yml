@@ -79,6 +79,10 @@ spring:
             threadCount: 10
             threadPriority: 5
             threadsInheritContextClassLoaderOfInitializingThread: true
+    #数据库方式，默认使用memory的方式（此时不需要配置jobStore）
+    job-store-type: jdbc
+#    auto-startup: true
+
   devtools:
     restart:
       enabled: true
@@ -96,3 +100,4 @@ mybatis:
 # logging
 logging:
   config: classpath:logback-spring.xml
+

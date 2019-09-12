@@ -14,7 +14,7 @@ spring:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/bms?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
     username: root
-    password: 123456
+    password: root
     initialSize: 1
     minIdle: 3
     maxActive: 20
@@ -38,11 +38,6 @@ spring:
     # 合并多个DruidDataSource的监控数据
     #useGlobalDataSourceStat: true
 
-    #数据库方式，默认使用memory的方式（此时不需要配置jobStore）
-    job-store-type: jdbc
-    #初始化表结构
-#    jdbc:
-#      initialize-schema: embedded
 
 
 
