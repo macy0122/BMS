@@ -62,8 +62,15 @@ public class ShiroConfig {
         return new ShiroDialect();
     }
 
+    /**
+     * @title: 
+     * @description: 
+     *
+     * @param: [securityManager]
+     * @return: org.apache.shiro.spring.web.ShiroFilterFactoryBean
+     */
     @Bean
-    ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
+    public ShiroFilterFactoryBean shiroFilterFactoryBean(SecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
         shiroFilterFactoryBean.setLoginUrl("/login");

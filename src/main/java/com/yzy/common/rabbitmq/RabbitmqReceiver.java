@@ -9,11 +9,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * describe: 登陆验证码消息发送
+ * @title:
+ * @description: 登陆验证码消息发送
  *
- * @author yzy
- * @date 2019/07/04
+ * @package: com.yzy.common.rabbitmq.RabbitmqReceiver.java
+ * @param:
+ * @return:
+ * @author: yzy
+ * @date: 2019-09-12 08:24:00
+ * @version: v1.0
  */
+
 @Component
 @RabbitListener(queues = {"login"})
 public class RabbitmqReceiver {

@@ -15,8 +15,6 @@ import java.lang.reflect.Method;
  * @ClassName: com.yzy.common.utils.Ip2RegionUtil.java
  * @author: yzy
  * @date: 2019/9/10 14:22
- * @param:
- * @return:
  * @version: v1.0
  */
 public class Ip2RegionUtil {

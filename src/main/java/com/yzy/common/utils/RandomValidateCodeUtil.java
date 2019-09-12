@@ -12,7 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * @author yzy
+ * @title: 
+ * @description: 生成随机码字符串
+ * 
+ * @package: com.yzy.common.utils.RandomValidateCodeUtil.java
+ * @author: yzy
+ * @date: 2019-09-12 08:37:12
+ * @version: v1.0
  */
 @Component
 public class RandomValidateCodeUtil {
@@ -26,7 +32,11 @@ public class RandomValidateCodeUtil {
     private static final Logger logger = LoggerFactory.getLogger(RandomValidateCodeUtil.class);
 
     /**
-     * 生成随机码字符串图片并回写到前端页面
+     * @title:
+     * @description: 生成随机码字符串图片并回写到前端页面
+     *
+     * @param: [request, response]
+     * @return: void
      */
     public void getRandcode(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession();

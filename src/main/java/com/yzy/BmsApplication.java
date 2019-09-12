@@ -1,5 +1,6 @@
 package com.yzy;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableSwaggerBootstrapUi;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,8 +15,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  * @description:  springboot 启动类
  *
  * @package: com.yzy.BmsApplication.java
- * @param:
- * @return:
  * @author: yzy
  * @date: 2019-09-11 17:42:12
  * @version: v1.0
@@ -24,6 +23,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableCaching
 @EnableScheduling
 @EnableAsync
+@EnableSwaggerBootstrapUi
 @EnableTransactionManagement
 @ServletComponentScan   //Servlet、Filter、Listener 可以直接通过 @WebServlet、@WebFilter、@WebListener 注解自动注册，无需其他代码。
 @MapperScan("com.yzy.*.dao")

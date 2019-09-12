@@ -7,6 +7,15 @@ import org.quartz.JobExecutionException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Component;
+/**
+ * @title: 
+ * @description: 
+ * 
+ * @package: com.yzy.common.task.WelcomeJob.java
+ * @author: yzy
+ * @date: 2019-09-12 08:36:43
+ * @version: v1.0
+ */
 
 @Component
 public class WelcomeJob implements Job {

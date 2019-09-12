@@ -16,8 +16,13 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * @title: QuartzManager.java
+ * @title:
  * @description: 计划任务管理
+ *
+ * @package: com.yzy.common.quartz.QuartzManager.java
+ * @author: yzy
+ * @date: 2019-09-12 08:35:21
+ * @version: v1.0
  */
 @Service
 public class QuartzManager {

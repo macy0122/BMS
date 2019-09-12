@@ -5,18 +5,24 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * describe:
+ * @title:
+ * @description: RabbitmqConfig 配置
  *
- * @author yzy
- * @date 2019/07/04
+ * @package: com.yzy.common.config.RabbitmqConfig.java
+ * @author: yzy
+ * @date: 2019-09-12 08:30:36
+ * @version: v1.0
  */
+
 @Configuration
 public class RabbitmqConfig {
 
     /**
-     * 建立绑定关系
+     * @title:
+     * @description: 建立绑定关系
      *
-     * @return Binding
+     * @param: []
+     * @return: org.springframework.amqp.core.Binding
      */
     @Bean
     public Binding loginBinding() {
@@ -24,9 +30,11 @@ public class RabbitmqConfig {
     }
 
     /**
-     * 创建添加通知队列
+     * @title:
+     * @description: 创建添加通知队列
      *
-     * @return Queue
+     * @param: []
+     * @return: org.springframework.amqp.core.Queue
      */
     @Bean
     public Queue loginQueue() {
@@ -34,9 +42,11 @@ public class RabbitmqConfig {
     }
 
     /**
-     * 创建直连交换器
+     * @title:
+     * @description: 创建直连交换器
      *
-     * @return DirectExchange
+     * @param: []
+     * @return: org.springframework.amqp.core.DirectExchange
      */
     @Bean
     public DirectExchange loginExchange() {
@@ -44,9 +54,11 @@ public class RabbitmqConfig {
     }
 
 	/**
-	 * 创建topic交换器
+	 * @title:
+	 * @description: 创建topic交换器
 	 *
-	 * @return TopicExchange
+	 * @param: []
+	 * @return: org.springframework.amqp.core.TopicExchange
 	 */
     @Bean
 	public TopicExchange loginTopicExchange(){
@@ -54,9 +66,11 @@ public class RabbitmqConfig {
     }
 
 	/**
-	 * 创建fanout交换器
+	 * @title:
+	 * @description: 创建fanout交换器
 	 *
-	 * @return FanoutExchange
+	 * @param: []
+	 * @return: org.springframework.amqp.core.FanoutExchange
 	 */
 	@Bean
 	public FanoutExchange loginFanoutExchange(){

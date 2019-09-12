@@ -5,11 +5,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;
 
 /**
- * describe:
+ * @title:
+ * @description: SchedulerConfig  spring简单定时任务配置
  *
- * @author yzy
- * @date 2019/07/05
+ * @package: com.yzy.common.config.SchedulerConfig.java
+ * @param:
+ * @return:
+ * @author: yzy
+ * @date: 2019-09-12 08:25:28
+ * @version: v1.0
  */
+
 
 @Configuration
 public class SchedulerConfig implements SchedulerFactoryBeanCustomizer {

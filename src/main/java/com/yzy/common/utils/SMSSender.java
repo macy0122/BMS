@@ -8,11 +8,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 手机短信发送
+ * @title:
+ * @description: 手机短信发送
+ *
+ * @package: com.yzy.common.utils.SMSSender.java
+ * @param:
+ * @return:
+ * @author: yzy
+ * @date: 2019-09-12 08:21:58
+ * @version: v1.0
  */
+
 @Component
 public class SMSSender {
 
+    /**
+     * @title: 
+     * @description:
+     *
+     * @param: [tel, contents]
+     * @return: boolean
+     * @version: v1.0
+     */
     public boolean sendSMS(String tel, String contents) throws Exception {
         Map<String, Object> map = new HashMap<>();
         map.put("userName", "GWCAI");

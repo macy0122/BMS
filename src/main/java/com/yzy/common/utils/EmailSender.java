@@ -8,13 +8,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * describe:
+ * @title:
+ * @description:  邮件发送
  *
- * @author yzy
- * @date 2019/06/19
- * @return 字符串："true" or "false"
+ * @package: com.yzy.common.utils.EmailSender.java
+ * @param:
+ * @return: 字符串："true" or "false"
+ * @author: yzy
+ * @date: 2019-09-12 08:22:41
+ * @version: v1.0
  */
+
 public class EmailSender {
+    /**
+     * @title:
+     * @description:
+     *
+     * @param: [mailto, mailcc, mailBcc, mfrom, Subject, Bodys]
+     * @return: java.lang.String  字符串："true" or "false"
+     * @version: v1.0
+     */
     public static String senderEmail(String mailto, String mailcc, String mailBcc, String mfrom,
                                      String Subject, String Bodys) {
         Map<String, Object> map = new HashMap<>();

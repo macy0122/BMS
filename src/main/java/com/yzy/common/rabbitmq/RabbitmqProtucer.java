@@ -11,7 +11,12 @@ public class RabbitmqProtucer {
 	private RabbitTemplate rabbitTemplate;
 
 	/**
+	 * @title: 
+	 * @description:
 	 *
+	 * @param: [exchange, routingKey, object]
+	 * @return: void
+	 * @version: v1.0
 	 */
 	public void sendMessage(String exchange,String routingKey,Object object){
 		rabbitTemplate.convertAndSend(exchange,routingKey,object);

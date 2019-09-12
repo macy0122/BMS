@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @title:
- * @description:
+ * @description:  自定义拦截器
  * @package: com.yzy.common.config
  * @ClassName: com.yzy.common.config.MyIncerteptor.java
  * @author: yzy
