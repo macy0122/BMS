@@ -13,9 +13,14 @@ import java.io.InputStream;
 import java.util.Iterator;
 
 /**
- * @author gaoyuzhe
- * @date 2017/12/18.
- */
+ * @title:
+ * @Description:
+ * @classname: com.yzy.common.utils.ImageUtils.java
+ * @Author: YZY
+ * @Date: 2019-09-11 22:46:13
+ * @version: V1.0
+ */ 
+ 
 public class ImageUtils {
     /***
      * 剪裁图片
