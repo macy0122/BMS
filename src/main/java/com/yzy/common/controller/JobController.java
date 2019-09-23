@@ -15,9 +15,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author chglee
- * @email 1992lcg@163.com
- * @date 2017-09-26 20:53:48
+ * @title: 
+ * @description: 
+ *
+ * @package: com.yzy.common.controller.JobController.java
+ * @author: yzy
+ * @date: 2019-09-23 08:55:40
+ * @version: v1.0
  */
 @Controller
 @RequestMapping("/common/job")
@@ -68,9 +72,9 @@ public class JobController extends BaseController {
     @ResponseBody
     @PostMapping("/save")
     public ResultDTO save(TaskDO taskScheduleJob) {
-        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
-        }
+//        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
+//            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
+//        }
         if (taskScheduleJobService.save(taskScheduleJob) > 0) {
             return ResultDTO.ok();
         }
@@ -83,9 +87,9 @@ public class JobController extends BaseController {
     @ResponseBody
     @PostMapping("/update")
     public ResultDTO update(TaskDO taskScheduleJob) {
-        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
-        }
+//        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
+//            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
+//        }
         taskScheduleJobService.update(taskScheduleJob);
         return ResultDTO.ok();
     }
@@ -96,9 +100,9 @@ public class JobController extends BaseController {
     @PostMapping("/remove")
     @ResponseBody
     public ResultDTO remove(Long id) {
-        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
-        }
+//        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
+//            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
+//        }
         if (taskScheduleJobService.remove(id) > 0) {
             return ResultDTO.ok();
         }
@@ -111,9 +115,9 @@ public class JobController extends BaseController {
     @PostMapping("/batchRemove")
     @ResponseBody
     public ResultDTO remove(@RequestParam("ids[]") Long[] ids) {
-        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
-        }
+//        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
+//            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
+//        }
         taskScheduleJobService.batchRemove(ids);
 
         return ResultDTO.ok();
@@ -122,9 +126,9 @@ public class JobController extends BaseController {
     @PostMapping(value = "/changeJobStatus")
     @ResponseBody
     public ResultDTO changeJobStatus(Long id, String cmd) {
-        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
-            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
-        }
+//        if (Constant.DEMO_ACCOUNT.equals(getUsername())) {
+//            return ResultDTO.error(1, "演示系统不允许修改,完整体验请部署程序");
+//        }
         String label = "停止";
         if ("start".equals(cmd)) {
             label = "启动";
