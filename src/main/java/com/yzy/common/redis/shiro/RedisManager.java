@@ -8,7 +8,13 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.util.Set;
 
 /**
- *
+ * @title: 
+ * @description: 
+ * 
+ * @package: com.yzy.common.redis.shiro.RedisManager.java
+ * @author: yzy
+ * @date: 2019-09-23 09:13:57
+ * @version: v1.0
  */
 public class RedisManager {
 

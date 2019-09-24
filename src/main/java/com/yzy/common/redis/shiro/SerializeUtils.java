@@ -5,6 +5,15 @@ import org.slf4j.LoggerFactory;
 
 import java.io.*;
 
+/**
+ * @title: 
+ * @description: 
+ * 
+ * @package: com.yzy.common.redis.shiro.SerializeUtils.java
+ * @author: yzy
+ * @date: 2019-09-23 09:13:39
+ * @version: v1.0
+ */
 public class SerializeUtils {
 
     private static Logger logger = LoggerFactory.getLogger(SerializeUtils.class);

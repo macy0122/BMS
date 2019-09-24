@@ -9,10 +9,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author 1992lcg@163.com
- * @Time 2017年9月6日
- * @description
+ * @title:
+ * @description:
  *
+ * @package: com.yzy.common.service.GeneratorService.java
+ * @author: yzy
+ * @date: 2019-09-23 09:11:25
+ * @version: v1.0
  */
 @Service
 public interface GeneratorService {

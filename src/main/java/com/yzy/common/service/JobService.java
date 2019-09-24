@@ -7,9 +7,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author chglee
- * @email 1992lcg@163.com
- * @date 2017-09-26 20:53:48
+ * @title: 
+ * @description:
+ * 
+ * @package: com.yzy.common.service.JobService.java
+ * @author: yzy
+ * @date: 2019-09-23 09:11:00
+ * @version: v1.0
  */
 public interface JobService {
 

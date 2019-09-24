@@ -1,9 +1,5 @@
 package com.yzy.common.redis.shiro;
 
-/**
- * @author yzy 1992lcg@163.com
- * @version V1.0
- */
 
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
@@ -13,6 +9,15 @@ import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
+/**
+ * @title:
+ * @description:
+ *
+ * @package: com.yzy.common.redis.shiro.RedisCache.java
+ * @author: yzy
+ * @date: 2019-09-23 09:14:04
+ * @version: v1.0
+ */
 public class RedisCache<K, V> implements Cache<K, V> {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());

@@ -6,11 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 文件上传
+ * @title:
+ * @description: 文件上传
  *
- * @author chglee
- * @email 1992lcg@163.com
- * @date 2017-09-19 16:02:20
+ * @package: com.yzy.common.service.FileService.java
+ * @author: yzy
+ * @date: 2019-09-23 09:11:45
+ * @version: v1.0
  */
 public interface FileService {
 

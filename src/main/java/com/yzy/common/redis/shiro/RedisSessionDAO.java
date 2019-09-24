@@ -11,6 +11,15 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * @title: 
+ * @description: 
+ * 
+ * @package: com.yzy.common.redis.shiro.RedisSessionDAO.java
+ * @author: yzy
+ * @date: 2019-09-23 09:13:49
+ * @version: v1.0
+ */
 public class RedisSessionDAO extends AbstractSessionDAO {
 
     private static Logger logger = LoggerFactory.getLogger(RedisSessionDAO.class);

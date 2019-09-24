@@ -7,11 +7,13 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * 字典表
+ * @title:
+ * @description: 字典表
  *
- * @author chglee
- * @email 1992lcg@163.com
- * @date 2017-09-29 18:28:07
+ * @package: com.yzy.common.service.DictService.java
+ * @author: yzy
+ * @date: 2019-09-23 09:11:58
+ * @version: v1.0
  */
 public interface DictService {
 
