@@ -239,7 +239,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
+			<version>1.18.10</version>
 		</dependency>
 
 		<!--ip2region:可以根据他获取一个具体ip的信息，国家、具体地址、网络服务商-->
