@@ -1,5 +1,6 @@
 package com.yzy.common.service.impl;
 
+import cn.hutool.core.io.IoUtil;
 import com.yzy.common.dao.GeneratorMapper;
 import com.yzy.common.service.GeneratorService;
 import com.yzy.common.utils.GenUtils;
@@ -36,7 +37,8 @@ public class GeneratorServiceImpl implements GeneratorService {
             //生成代码
             GenUtils.generatorCode(table, columns, zip);
         }
-        IOUtils.closeQuietly(zip);
+        IoUtil.close(zip);
+//        IOUtils.closeQuietly(zip);
         return outputStream.toByteArray();
     }
 

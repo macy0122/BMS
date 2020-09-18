@@ -2,6 +2,7 @@ package com.yzy.common.utils;
 
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.StrUtil;
 import com.yzy.common.config.Constant;
 import com.yzy.common.domain.ColumnDO;
@@ -108,7 +109,8 @@ public class GenUtils {
                 //添加到zip
                 zip.putNextEntry(new ZipEntry(getFileName(template, tableDO.getClassname(), tableDO.getClassName(), config.getString("package").substring(config.getString("package").lastIndexOf(".") + 1))));
                 IOUtils.write(sw.toString(), zip, "UTF-8");
-                IOUtils.closeQuietly(sw);
+//                IOUtils.closeQuietly(sw);
+                IoUtil.close(sw);
                 zip.closeEntry();
             } catch (IOException e) {
                 throw new BDException("渲染模板失败，表名：" + tableDO.getTableName(), e);

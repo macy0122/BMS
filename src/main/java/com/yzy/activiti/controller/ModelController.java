@@ -92,7 +92,7 @@ public class ModelController extends BaseController {
         ObjectNode stencilSetNode = objectMapper.createObjectNode();
         stencilSetNode.put("namespace",
                 "http://b3mn.org/stencilset/bpmn2.0#");
-        editorNode.put("stencilset", stencilSetNode);
+        editorNode.set("stencilset", stencilSetNode);
         repositoryService.addModelEditorSource(id, editorNode.toString().getBytes("utf-8"));
         try {
             response.sendRedirect("/modeler.html?modelId=" + id);
@@ -116,7 +116,7 @@ public class ModelController extends BaseController {
                 modelNode.put(MODEL_ID, model.getId());
                 ObjectNode editorJsonNode = (ObjectNode) objectMapper.readTree(
                         new String(repositoryService.getModelEditorSource(model.getId()), "utf-8"));
-                modelNode.put("model", editorJsonNode);
+                modelNode.set("model", editorJsonNode);
 
             } catch (Exception e) {
                 LOGGER.error("Error creating model JSON", e);
